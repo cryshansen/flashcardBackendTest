@@ -44,3 +44,7 @@ jobs:
           SPRING_MAIL_HOST: localhost
           SPRING_MAIL_PORT: 1025
         run: mvn -B clean test --file pom.xml
+        
+      - name: Check MailHog messages
+        run: |
+          curl http://localhost:8025/api/v2/messages
