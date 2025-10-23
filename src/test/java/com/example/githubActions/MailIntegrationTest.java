@@ -20,5 +20,8 @@ class MailIntegrationTest {
         message.setSubject("CI Test");
         message.setText("Hello from GitHub Actions!");
         mailSender.send(message);
+        
+        System.out.println("Sent test email to MailHog at localhost:1025");
+
     }
 }
